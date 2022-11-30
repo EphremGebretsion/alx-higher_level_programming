@@ -1,2 +1,5 @@
 #!/usr/bin/python3
-print("{}".format("abcdefghijklmnopqrstuvwxyz"), end="")
+indx = 97
+while (indx < 123):
+    print("{}".format(chr(indx)), end="")
+    indx += 1
