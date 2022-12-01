@@ -7,6 +7,8 @@ def uppercase(str):
         asii = ord(str[i])
         if (asii > 96 and asii < 123):
             newchr = chr(ord(str[i]) - 32)
-        print(newchr, end="")
+        if (i == strLen - 1):
+            print("{}".format(newchr))
+        else:
+            print("{}".format(newchr), end="")
         i += 1
-    print("")
