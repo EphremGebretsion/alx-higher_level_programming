@@ -1,1 +1,1 @@
-this is for lists and data structure project
+this is for lists and data structures project
