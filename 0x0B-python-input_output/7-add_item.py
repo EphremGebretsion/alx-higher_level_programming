@@ -14,4 +14,3 @@ if (__name__ == "__main__"):
         prev_list = load_from_json_file("add_item.json")
     new_list = prev_list + sys.argv[1:]
     save_to_json_file(new_list, "add_item.json")
-    print("the sum is: ")
