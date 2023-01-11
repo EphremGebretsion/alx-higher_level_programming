@@ -12,6 +12,8 @@ class Student():
     def to_json(self, attrs=None):
         if (not attrs):
             return (self.__dict__)
+        if (type(attrs) != list):
+            return (self.__dict__)
 
         newlist = {}
         dic = self.__dict__
