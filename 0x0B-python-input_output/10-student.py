@@ -15,7 +15,7 @@ class Student():
         if (type(attrs) != list):
             return (self.__dict__)
         if (len(attrs) == 0):
-            return ({})
+            return (None)
         newlist = {}
         dic = self.__dict__
         for i in attrs:
