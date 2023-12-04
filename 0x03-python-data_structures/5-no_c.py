@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 def no_c(my_string):
-    if not my_string:
-        return None
     new_string = my_string[:]
     i = 0
     while i < len(new_string):
