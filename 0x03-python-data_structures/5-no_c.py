@@ -6,6 +6,4 @@ def no_c(my_string):
         if (new_string[i] in ["C", "c"]):
             new_string = new_string[:i] + new_string[i + 1:]
         i += 1
-
     return new_string
-
