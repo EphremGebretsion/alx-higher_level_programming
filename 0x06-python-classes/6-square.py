@@ -5,6 +5,7 @@
 class Square:
     """creating a square class with error exceptions"""
     def __init__(self, size=0, position=(0, 0)):
+        """constructor for the class"""
         if (type(size) is not int):
             raise TypeError("size must be an integer")
         elif (size < 0):
@@ -23,14 +24,17 @@ class Square:
             self.__position = position
 
     def area(self):
+        """ calculates the area """
         return (self.__size * self.__size)
 
     @property
     def size(self):
+        """ returns the size"""
         return self.__size
 
     @size.setter
     def size(self, value):
+        """ sets the size """
         if (type(value) is not int):
             raise TypeError("size must be an integer")
         elif (value < 0):
@@ -38,6 +42,7 @@ class Square:
         self.__size = value
 
     def my_print(self):
+        """ prints the square """
         if (self.__size == 0):
             print("")
         else:
@@ -59,10 +64,12 @@ class Square:
 
     @property
     def position(self):
+        """ gets the position """
         return self.__position
 
     @position.setter
     def position(self, value):
+        """ sets the position """
         if (type(value) is not tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
         elif (len(value) != 2):
