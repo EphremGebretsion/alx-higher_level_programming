@@ -11,9 +11,9 @@ class Square(BaseSq):
         if (self.__size == 0):
             print("")
         else:
-            while(i < self.__size):
+            while (i < self.__size):
                 j = 0
-                while(j < self.__size):
+                while (j < self.__size):
                     print("#", end="")
                     j += 1
                 print("")
