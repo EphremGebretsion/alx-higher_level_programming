@@ -5,7 +5,10 @@ BaseSq = __import__("4-square").Square
 
 
 class Square(BaseSq):
+    """ modifed version of base square class that
+    adds additional functionalities"""
     def my_print(self):
+        """ prints the square with the right size """
         i = 0
         if (self.__size == 0):
             print("")
