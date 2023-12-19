@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-""" square class """
-
+"""This module includes modified square class from 4-square"""
 BaseSq = __import__("4-square").Square
 
 
 class Square(BaseSq):
-    """ modifed version of base square class that
-    adds additional functionalities"""
+    """ modifed square class that adds additional functionalities"""
     def my_print(self):
         """ prints the square with the right size """
         i = 0
