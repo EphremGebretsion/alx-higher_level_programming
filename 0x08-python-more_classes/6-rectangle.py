@@ -5,6 +5,8 @@
 class Rectangle:
     """Rectangle class with getter and seters"""
 
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         if (type(width) != int):
             raise TypeError("width must be an integer")
@@ -18,6 +20,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = height
+        Rectangle.number_of_instances += 1
 
     def __str__(self):
         if (self.width == 0 or self.height == 0):
@@ -29,6 +32,7 @@ class Rectangle:
         return "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
 
     def __del__(self):
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
     @property
