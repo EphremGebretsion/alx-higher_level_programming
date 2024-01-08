@@ -38,3 +38,15 @@ Traceback (most recent call last):
   File "/home/ephi/Documents/alx/alx-higher_level_programming/0x07-python-test_driven_development/2-matrix_divided.py", line 24, in matrix_divided
     raise TypeError(message)
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+>>> matrix = [[32, 54, 89], [99, 32323, 3]]
+>>> matrix_divided(matrix, float("inf"))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+>>> matrix_divided(matrix)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
