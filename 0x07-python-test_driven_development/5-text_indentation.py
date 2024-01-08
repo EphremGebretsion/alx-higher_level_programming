@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 """
 this script prints a given test
 and also adds indentation for some selected characters
@@ -6,6 +6,10 @@ and also adds indentation for some selected characters
 
 
 def text_indentation(text):
+    """
+    prints a text and adds indentation when
+    . ? : are found
+    """
     if type(text) is not str:
         raise TypeError("text must be a string")
     n = 1
