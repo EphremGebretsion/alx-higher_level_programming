@@ -24,6 +24,12 @@ class TestMaxInteger(unittest.TestCase):
         self.assertAlmostEqual(max_integer([9, -23, 3]), 9)
         self.assertAlmostEqual(max_integer([-32, -389, -1]), -1)
 
+    def test_one(self):
+        """
+        tests a list with one element
+        """
+        self.assertAlmostEqual(max_integer([23]), 23)
+
     def test_emp(self):
         """
         tests the result of empty list
