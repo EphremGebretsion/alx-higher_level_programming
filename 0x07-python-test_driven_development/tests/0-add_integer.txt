@@ -23,4 +23,32 @@ TypeError: b must be an integer
 92
 >>> add_integer(3.8989)
 101
+>>> add_integer()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: add_integer() missing 1 required positional argument: 'a'
+>>> add_integer(None)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ephi/Documents/alx/alx-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 14, in add_integer
+    raise TypeError("a must be an integer")
+TypeError: a must be an integer
+>>> add_integer(1, None)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ephi/Documents/alx/alx-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 18, in add_integer
+    raise TypeError("b must be an integer")
+TypeError: b must be an integer
+>>> add_integer(1, float("inf"))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ephi/Documents/alx/alx-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 20, in add_integer
+    return (int(a) + int(b))
+OverflowError: cannot convert float infinity to integer
+>>> add_integer(float("inf"), float("inf"))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ephi/Documents/alx/alx-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 20, in add_integer
+    return (int(a) + int(b))
+OverflowError: cannot convert float infinity to integer
 
