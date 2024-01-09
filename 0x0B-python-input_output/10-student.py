@@ -16,9 +16,10 @@ class Student:
 
     def to_json(self, attrs=None):
         """returns a dictionary to encode in json"""
+        res = self.__dict__
         if not attrs:
-            return self.__dict__
-        else:
+            return res
+        else if (type(attrs) is list):
             res = {}
             for k in attrs:
                 if k in self.__dict__:
