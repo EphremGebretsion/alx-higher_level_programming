@@ -10,9 +10,9 @@ class Student:
     """
     def __init__(self, first_name, last_name, age):
         """initialising method"""
-        self.first_name = first_name
-        self.last_name = last_name
         self.age = age
+        self.last_name = last_name
+        self.first_name = first_name
 
     def to_json(self, attrs=None):
         """returns a dictionary to encode in json"""
@@ -21,8 +21,11 @@ class Student:
             return res
         else:
             if (type(attrs) is list):
-                res = {}
                 for k in attrs:
-                    if k in self.__dict__:
+                    if type(k) is not str:
+                        return res
+                res = {}
+                for k in self.__dict__:
+                    if k in attrs:
                         res[k] = self.__dict__[k]
         return res
