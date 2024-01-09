@@ -19,9 +19,10 @@ class Student:
         res = self.__dict__
         if not attrs:
             return res
-        else if (type(attrs) is list):
-            res = {}
-            for k in attrs:
-                if k in self.__dict__:
-                    res[k] = self.__dict__[k]
+        else:
+            if (type(attrs) is list):
+                res = {}
+                for k in attrs:
+                    if k in self.__dict__:
+                        res[k] = self.__dict__[k]
         return res
