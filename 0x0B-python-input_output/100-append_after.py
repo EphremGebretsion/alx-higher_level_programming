@@ -5,6 +5,9 @@ peending inbetween a text file
 
 
 def append_after(filename="", search_string="", new_string=""):
+    """
+    appends a test after the serched string in a file
+    """
     rd = []
     res = []
     with open(filename, mode="r", encoding="UTF8") as my_file:
