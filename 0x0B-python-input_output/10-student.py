@@ -21,6 +21,8 @@ class Student:
             return res
         else:
             if (type(attrs) is list):
+                if not attrs:
+                    return res
                 for k in attrs:
                     if type(k) is not str:
                         return res
