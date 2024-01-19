@@ -113,21 +113,21 @@ class TestRectangle(unittest.TestCase):
         self.assertAlmostEqual(my.x, 1)
         self.assertAlmostEqual(my.y, 9)
 
-        my.update(id = 4)
+        my.update(id=4)
         self.assertAlmostEqual(my.id, 4)
-        my.update(id = 89, width = 1)
+        my.update(id=89, width=1)
         self.assertAlmostEqual(my.id, 89)
         self.assertAlmostEqual(my.width, 1)
-        my.update(id = 33, width = 3, height = 54)
+        my.update(id=33, width=3, height=54)
         self.assertAlmostEqual(my.id, 33)
         self.assertAlmostEqual(my.width, 3)
         self.assertAlmostEqual(my.height, 54)
-        my.update(id = 2, width = 11, height = 12, x = 3)
+        my.update(id=2, width=11, height=12, x=3)
         self.assertAlmostEqual(my.id, 2)
         self.assertAlmostEqual(my.width, 11)
         self.assertAlmostEqual(my.height, 12)
         self.assertAlmostEqual(my.x, 3)
-        my.update(id = 23, width = 56, height = 32, x = 7, y = 12)
+        my.update(id=23, width=56, height=32, x=7, y=12)
         self.assertAlmostEqual(my.id, 23)
         self.assertAlmostEqual(my.width, 56)
         self.assertAlmostEqual(my.height, 32)
@@ -135,19 +135,19 @@ class TestRectangle(unittest.TestCase):
         self.assertAlmostEqual(my.y, 12)
 
     def test_create(self):
-        my = Rectangle.create(id = 34)
+        my = Rectangle.create(id=34)
         d = {'x': 0, 'y': 0, 'id': 34, 'height': 1, 'width': 1}
         self.assertAlmostEqual(my.to_dictionary(), d)
-        my = Rectangle.create(id = 23, width = 11)
+        my = Rectangle.create(id=23, width=11)
         d = {'x': 0, 'y': 0, 'id': 23, 'height': 1, 'width': 11}
         self.assertAlmostEqual(my.to_dictionary(), d)
-        my = Rectangle.create(id = 32, width = 33, height = 8)
+        my = Rectangle.create(id=32, width=33, height=8)
         d = {'x': 0, 'y': 0, 'id': 32, 'height': 8, 'width': 33}
         self.assertAlmostEqual(my.to_dictionary(), d)
-        my = Rectangle.create(id = 89, width = 2, height = 7, x = 5)
+        my = Rectangle.create(id=89, width=2, height=7, x=5)
         d = {'x': 5, 'y': 0, 'id': 89, 'height': 7, 'width': 2}
         self.assertAlmostEqual(my.to_dictionary(), d)
-        my = Rectangle.create(id = 7, width = 4, height = 3, x = 32, y = 3)
+        my = Rectangle.create(id=7, width=4, height=3, x=32, y=3)
         d = {'x': 32, 'y': 3, 'id': 7, 'height': 3, 'width': 4}
         self.assertAlmostEqual(my.to_dictionary(), d)
 
