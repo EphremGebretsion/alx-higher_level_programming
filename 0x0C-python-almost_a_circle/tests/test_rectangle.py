@@ -160,9 +160,13 @@ class TestRectangle(unittest.TestCase):
 
         Rectangle.save_to_file([])
         lis = ''
+        json_lis = []
         with open("Rectangle.json", "r") as my_file:
             lis = my_file.read()
+            my_file.seek(0)
+            json_lis = json.load(my_file)
         self.assertAlmostEqual(lis, '[]')
+        self.assertAlmostEqual(json_lis, [])
 
         res = [{'x': 0, 'y': 0, 'id': 17, 'height': 2, 'width': 1}]
         json_lis = []
