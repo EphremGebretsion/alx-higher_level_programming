@@ -16,6 +16,8 @@ class TestRectangle(unittest.TestCase):
         self.assertAlmostEqual(my2.height, 2)
         self.assertAlmostEqual(my2.x, 3)
         self.assertAlmostEqual(my2.y, 4)
+        my3 = Rectangle(1, 2, 3, 4, 5)
+        self.assertAlmostEqual(my3.id, 5)
 
     def test_recEr(self):
         with self.assertRaises(TypeError):
