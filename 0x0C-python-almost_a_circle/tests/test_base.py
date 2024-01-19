@@ -22,3 +22,10 @@ class TestBase(TestCase):
         lis = {'x': 2, 'width': 10, 'id': 1, 'height': 7, 'y': 8}
         res = '[{"x": 2, "width": 10, "id": 1, "height": 7, "y": 8}]'
         self.assertAlmostEqual(Base.to_json_string([lis]), res)
+
+    def test_from_json(self):
+        self.assertAlmostEqual(Base.from_json_string(None), [])
+        self.assertAlmostEqual(Base.from_json_string("[]"), [])
+        lis = [{"id": "5", "name": "ephi"}, {"size": 3}]
+        js = '[{"id": "5", "name": "ephi"}, {"size": 3}]'
+        self.assertAlmostEqual(Base.from_json_string(js), lis)
