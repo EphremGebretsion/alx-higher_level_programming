@@ -3,6 +3,7 @@
 base class
 """
 import csv
+import turtle
 import json
 
 
@@ -117,4 +118,63 @@ class Base:
                 dummy.y = int(i[4])
             i_list.append(dummy)
 
-        return i_list
+        return i_lisit
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """draws rectangles and squares using turtle"""
+        tot_recwidth = 0
+        for r in list_rectangles:
+            tot_recwidth += r.width
+
+        tot_sqwidth = 0
+        tot_sqheight = 0
+        for s in list_squares:
+            tot_sqwidth += s.width
+            tot_sqheight += s.height
+
+        x_begin = 0
+        y_begin = 0
+        half = 0
+        if tot_recwidth >= tot_sqwidth:
+            half = ((tot_recwidth + ((len(list_rectangles) - 1) * 5)) / 2)
+        else:
+            half = ((tot_sqwidth + ((len(list_squares) - 1) * 5)) / 2)
+        x_begin = 0 - half
+
+        y_begin = 0 + 5
+        my_board = turtle.Turtle()
+        my_board.penup()
+        my_board.goto(x_begin, y_begin)
+        shift = 0
+        for r in list_rectangles:
+            my_board.pendown()
+            my_board.setheading(0)
+            my_board.forward(r.width)
+            my_board.left(90)
+            my_board.forward(r.height)
+            my_board.left(90)
+            my_board.forward(r.width)
+            my_board.left(90)
+            my_board.forward(r.height)
+            my_board.penup()
+            x_new = my_board.position()[0] + r.width + 5
+            my_board.goto(x_new, y_begin)
+
+        y_begin = 0 - 5
+        my_board.goto(x_begin, y_begin)
+        for s in list_squares:
+            my_board.pendown()
+            my_board.setheading(0)
+            my_board.forward(s.size)
+            my_board.right(90)
+            my_board.forward(s.size)
+            my_board.right(90)
+            my_board.forward(s.size)
+            my_board.right(90)
+            my_board.forward(s.size)
+            my_board.penup()
+            x_new = my_board.position()[0] + s.width + 5
+            my_board.goto(x_new, y_begin)
+
+        turtle.mainloop()
