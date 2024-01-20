@@ -118,7 +118,7 @@ class Base:
                 dummy.y = int(i[4])
             i_list.append(dummy)
 
-        return i_lisit
+        return i_list
 
     @staticmethod
     def draw(list_rectangles, list_squares):
