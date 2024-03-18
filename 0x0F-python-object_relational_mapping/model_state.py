@@ -7,6 +7,8 @@ from sqlalchemy.orm import declarative_base
 
 
 Base = declarative_base()
+
+
 class State(Base):
     """
     state class that connects with database table states
