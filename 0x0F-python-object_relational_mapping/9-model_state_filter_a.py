@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-lists the first State objects from the database hbtn_0e_6_usa
+lists all State objects with state name that contains letter a
+from the database hbtn_0e_6_usa
 """
 from sys import argv
 from model_state import State, Base
@@ -17,8 +18,6 @@ if __name__ == "__main__":
     Session = sessionmaker()
     Session.configure(bind=engine)
     session = Session()
-    first_row = session.query(State).first()
-    if first_row:
-        print(f"{first_row.id}: {first_row.name}")
-    else:
-        print("Nothing")
+    res = session.query(State).filter(State.name.like("%a%")).all()
+    for row in res:
+        print(f"{row.id}: {row.name}")
