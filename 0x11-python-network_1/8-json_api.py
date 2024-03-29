@@ -7,9 +7,9 @@ and display the id and name like this: [<id>] <name>"""
 import requests
 import sys
 
-if(__name__ == "__main__"):
+if __name__ == "__main__":
 
-    if(len(sys.argv) < 2):
+    if len(sys.argv) < 2:
         print("No result")
     else:
         val = {}
