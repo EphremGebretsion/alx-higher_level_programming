@@ -6,5 +6,5 @@ req.get(url, (err, response, body) => {
     console.log(err);
     return;
   }
-  console.log(response.statusCode);
+  console.log('code: ' + response.statusCode);
 });
