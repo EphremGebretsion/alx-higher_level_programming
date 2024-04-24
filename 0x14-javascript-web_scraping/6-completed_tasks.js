@@ -2,7 +2,10 @@
 const req = require('request');
 const url = process.argv[2];
 req.get(url, (err, resp, body) => {
-  if (err) { return; }
+  if (err) {
+    console.log(err);
+    return;
+  }
   const bodyObj = JSON.parse(body);
   const counts = {};
   bodyObj.forEach((element) => {
