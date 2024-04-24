@@ -10,7 +10,7 @@ req.get(url, (err, resp, body) => {
   const counts = {};
   bodyObj.forEach((element) => {
     const key = element.userId.toString();
-    if (!(key in counts)) { counts[key] = 0; }
+    if (!(key in counts) && element.completed) { counts[key] = 0; }
     if (element.completed) { counts[key]++; }
   });
   console.log(counts);
