@@ -1,8 +1,7 @@
 #!/usr/bin/node
 const req = require('request');
 const url = process.argv[2] + '/';
-const charID = 18;
-const charURL = 'https://swapi-api.alx-tools.com/api/people/' + charID + '/';
+const charURL = 'https://swapi-api.alx-tools.com/api/people/18/';
 req.get(url, (err, resp, body) => {
   if (err) {
     console.log(err);
